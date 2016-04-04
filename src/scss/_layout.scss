@@ -1,0 +1,171 @@
+
+$br-small: 34em;
+$br-medium: 48em;
+$br-large: 62em;
+$br-extra-large: 75em;
+
+$one: 1/12 * 100%;
+$two: 2/12 * 100%;
+$three: 3/12 * 100%;
+$four: 4/12 * 100%;
+$five: 5/12 * 100%;
+$six: 6/12 * 100%;
+$seven: 7/12 * 100%;
+$eight: 8/12 * 100%;
+$nine: 9/12 * 100%;
+$ten: 10/12 * 100%;
+$eleven: 11/12 * 100%;
+$twelve: 12/12 * 100%;
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+    font-size: 12px;
+}
+
+
+html, body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.row, .column, .col {
+  display: flex;
+}
+
+.row {
+  width: 100%;
+  flex-flow: row wrap;
+}
+
+
+.xs1 { width: $one; }
+.xs2 { width: $two; }
+.xs3 { width: $three; }
+.xs4 { width: $four; }
+.xs5 { width: $five; }
+.xs6 { width: $six; }
+.xs7 { width: $seven; }
+.xs8 { width: $eight; }
+.xs9 { width: $nine; }
+.xs10 { width: $ten; }
+.xs11 { width: $eleven; }
+.xs12 { width: $twelve; }
+
+
+// small
+@media (min-width: $br-small) {
+
+  .s1 { width: $one; }
+  .s2 { width: $two; }
+  .s3 { width: $three; }
+  .s4 { width: $four; }
+  .s5 { width: $five; }
+  .s6 { width: $six; }
+  .s7 { width: $seven; }
+  .s8 { width: $eight; }
+  .s9 { width: $nine; }
+  .s10 { width: $ten; }
+  .s11 { width: $eleven; }
+  .s12 { width: $twelve; }
+
+
+}
+
+
+
+// Medium
+@media (min-width: $br-medium) {
+
+  .m1 { width: $one; }
+  .m2 { width: $two; }
+  .m3 { width: $three; }
+  .m4 { width: $four; }
+  .m5 { width: $five; }
+  .m6 { width: $six; }
+  .m7 { width: $seven; }
+  .m8 { width: $eight; }
+  .m9 { width: $nine; }
+  .m10 { width: $ten; }
+  .m11 { width: $eleven; }
+  .m12 { width: $twelve; }
+
+}
+
+// Large
+@media (min-width: $br-large) {
+
+  .l1 { width: $one; }
+  .l2 { width: $two; }
+  .l3 { width: $three; }
+  .l4 { width: $four; }
+  .l5 { width: $five; }
+  .l6 { width: $six; }
+  .l7 { width: $seven; }
+  .l8 { width: $eight; }
+  .l9 { width: $nine; }
+  .l10 { width: $ten; }
+  .l11 { width: $eleven; }
+  .l12 { width: $twelve; }
+
+}
+
+// Extra
+@media (min-width: $br-extra-large) {
+
+  .xl1 { width: $one; }
+  .xl2 { width: $two; }
+  .xl3 { width: $three; }
+  .xl4 { width: $four; }
+  .xl5 { width: $five; }
+  .xl6 { width: $six; }
+  .xl7 { width: $seven; }
+  .xl8 { width: $eight; }
+  .xl9 { width: $nine; }
+  .xl10 { width: $ten; }
+  .xl11 { width: $eleven; }
+  .xl12 { width: $twelve; }
+
+}
+
+
+
+.only-xs, .only-s, .only-m, .only-l, .only-xl {
+  display: none;
+}
+
+@media (max-width: $br-small) {
+  .only-xs {
+    display: block;
+  }
+}
+
+@media (min-width: $br-small) and (max-width: $br-medium) {
+  .only-s {
+    display: block;
+  }
+}
+
+@media (min-width: $br-medium) and (max-width: $br-large) {
+  .only-m {
+    display: block;
+  }
+}
+
+@media (min-width: $br-large) and (max-width: $br-extra-large) {
+  .only-l {
+    display: block;
+  }
+}
+
+@media (min-width: $br-extra-large) {
+ .only-xl {
+    display: block;
+  }
+}
