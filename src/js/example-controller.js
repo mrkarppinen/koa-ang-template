@@ -1,17 +1,14 @@
 
-(function (app){
 
 
-  app.ExampleController = ng.core.Component({
+
+  module.exports = ng.core.Component({
     selector: 'app',
     templateUrl: '/public/templates/app.html'
-  }).Class({
+    }).Class({
 
-    constructor: function (){
-      console.log('ExampleController up and running!!');
-    }
+      constructor: function (){
+        console.log('ExampleController up and running!!');
+      }
 
   });
-
-
-})(window.app || (window.app = {}));

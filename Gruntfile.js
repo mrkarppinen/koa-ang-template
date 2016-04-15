@@ -9,7 +9,7 @@ module.exports = function(grunt) {
           sourceMapName: 'public/js/main.map'
         },
         files: {
-          'public/js/scripts.min.js': ['src/js/**/*.js'],
+          'public/js/scripts.min.js': ['public/js/scripts.js'],
         }
       }
     },
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
     watch: {
       testapp: {
         files: ['src/**/*', 'public/**/*.html'],
-        tasks: ['uglify', 'sass'],
+        tasks: ['browserify','uglify', 'sass'],
         options: {
           spawn: false,
           livereload: true
@@ -41,7 +41,14 @@ module.exports = function(grunt) {
         },
         src: ['test/**/*.js']
       }
+    },
+    browserify: {
+    dist: {
+      files: {
+        'public/js/scripts.min.js': ['src/**/*.js']
+      }
     }
+  }
   });
 
 
@@ -49,9 +56,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-mocha-test');
+  grunt.loadNpmTasks('grunt-browserify');
 
-  
+
   grunt.registerTask('test', ['mochaTest']);
-  grunt.registerTask('default', ['uglify', 'sass']);
+  grunt.registerTask('default', ['browserify','uglify', 'sass']);
 
 };
