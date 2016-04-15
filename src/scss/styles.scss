@@ -1,22 +1,20 @@
 
 
 @import 'layout';
+@import 'elements';
 
-@font-face {
-      font-family: "now";
-      src: url("../font/now/Now-Regular.otf");
-}
-
-$font-color: #333;
-
-html {
-    color: $font-color;
-    font-family: now;
-}
 
 
 
 body {
   // font-size: 1rem;
   // background-color: #c9c9c9;
+}
+
+.col {
+  justify-content: center;
+}
+
+button {
+  margin-top: 1em;
 }

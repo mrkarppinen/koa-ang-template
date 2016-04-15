@@ -1,13 +1,14 @@
 
 
 
-(function (app){
+(function (){
 
-  var ExampleController = require('./example-controller');
+  var AppController = require('./app-controller');
+
 
   document.addEventListener('DOMContentLoaded', function (){
       ng.core.enableProdMode();
-      ng.platform.browser.bootstrap(ExampleController)
+      ng.platform.browser.bootstrap(AppController)
   });
 
-})(window.app || (window.app = {}));
+})();
