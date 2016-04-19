@@ -182,28 +182,33 @@ html, body, ul {
   font-family: "now";
   src: url("../font/now/Now-Regular.otf"); }
 
-html {
-  color: #333;
+* {
   font-family: now; }
 
+html {
+  color: #333; }
+
 button {
+  font-family: now;
   background: none;
-  border: 1px solid #888;
+  border: 2px solid #b5b5b7;
   border-radius: 6px;
   padding: 10px;
   cursor: pointer; }
   button:hover {
-    background-color: #eae0c2; }
+    background-color: #e8edf3; }
 
 a {
   text-decoration: none;
   color: #333; }
 
+a:hover {
+  border-bottom: 2px solid #b5b5b7; }
+
 input {
   background: none;
   border: none;
-  border-bottom: 1px solid #888;
-  border-radius: 6px;
+  border-bottom: 2px solid #b5b5b7;
   padding: 2px;
   text-align: center; }
 

@@ -5,21 +5,28 @@
 
 $font-color: #333;
 
+$border-color: #b5b5b7;
+$border-width: 2px;
+
+* {
+  font-family: now;
+}
+
 html {
     color: $font-color;
-    font-family: now;
 }
 
 
 button {
+  font-family: now;
   background: none;
-  border: 1px solid #888;
+  border: $border-width solid $border-color;
   border-radius: 6px;
   padding: 10px;
   cursor: pointer;
 
   &:hover {
-    background-color: #eae0c2;
+    background-color: #e8edf3;
   }
 
 }
@@ -29,12 +36,15 @@ a {
   color: $font-color;
 }
 
+a:hover {
+  border-bottom: $border-width solid $border-color;
+}
+
 
 input {
   background: none;
   border: none;
-  border-bottom: 1px solid #888;
-  border-radius: 6px;
+  border-bottom: $border-width solid $border-color;
   padding: 2px;
   text-align: center;
 }
