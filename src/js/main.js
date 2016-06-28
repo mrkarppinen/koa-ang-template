@@ -1,9 +1,7 @@
 
-
+  import AppController from './app-controller';
 
 (function (){
-
-  var AppController = require('./app-controller');
 
 
   document.addEventListener('DOMContentLoaded', function (){

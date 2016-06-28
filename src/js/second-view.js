@@ -24,4 +24,4 @@ var SecondView = ng.core.Component({
 
 SecondView.parameters = [[ng.router.Router]];
 
-module.exports = SecondView;
+export default SecondView;

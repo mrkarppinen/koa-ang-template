@@ -25,4 +25,4 @@ var ThirdView = ng.core.Component({
 
 ThirdView.parameters = [[ng.router.Router], [ng.router.RouteParams]];
 
-module.exports = ThirdView;
+export default ThirdView;

@@ -1,3 +1,6 @@
+
+var path = require('path');
+
 module.exports = function(grunt) {
 
   grunt.initConfig({
@@ -27,7 +30,7 @@ module.exports = function(grunt) {
     watch: {
       testapp: {
         files: ['src/**/*', 'public/**/*.html'],
-        tasks: ['browserify','uglify', 'sass'],
+        tasks: ['webpack','uglify', 'sass'],
         options: {
           spawn: false,
           livereload: true
@@ -42,24 +45,36 @@ module.exports = function(grunt) {
         src: ['test/**/*.js']
       }
     },
-    browserify: {
-    dist: {
-      files: {
-        'public/js/scripts.min.js': ['src/**/*.js']
-      }
+
+
+  webpack: {
+    someName: {
+    	entry: "./src/js/main.js",
+    	output: {
+    		path: "public/js/",
+    		filename: "scripts.min.js"
+    	},
+      module: {
+        loaders: [{
+            test: path.join(__dirname, 'src/js'),
+            exclude: /node_modules/,
+            loader: 'babel-loader?cacheDirectory'
+        }]
+  	   }
     }
   }
-  });
 
+
+
+});
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-mocha-test');
-  grunt.loadNpmTasks('grunt-browserify');
-
+  grunt.loadNpmTasks('grunt-webpack');
 
   grunt.registerTask('test', ['mochaTest']);
-  grunt.registerTask('default', ['browserify','uglify', 'sass']);
+  grunt.registerTask('default', ['webpack','uglify', 'sass']);
 
 };

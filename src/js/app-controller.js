@@ -1,8 +1,8 @@
 
 
-  var FirstView = require('./first-view');
-  var SecondView = require('./second-view');
-  var ThirdView = require('./third-view');
+  import FirstView from './first-view';
+  import SecondView from './second-view';
+  import ThirdView from './third-view';
 
 
   var AppController = ng.core.Component({
@@ -28,4 +28,4 @@
 
 AppController.parameters = [[ng.router.Router]];
 
-module.exports = AppController;
+export default AppController;
