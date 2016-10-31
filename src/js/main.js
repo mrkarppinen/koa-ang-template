@@ -1,12 +1,11 @@
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-  import AppController from './app-controller';
-
-(function (){
+import AppModule from './app-module';
 
 
-  document.addEventListener('DOMContentLoaded', function (){
-      ng.core.enableProdMode();
-      ng.platform.browser.bootstrap(AppController)
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+      platformBrowserDynamic()
+      .bootstrapModule(AppModule);
   });
-
 })();

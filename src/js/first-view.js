@@ -1,5 +1,7 @@
 
-export default ng.core.Component({
+import { Component } from '../../node_modules/@angular/core';
+
+var FirstView = Component({
   templateUrl: 'public/templates/first.html'
 }).Class({
   constructor: function (){
@@ -9,3 +11,6 @@ export default ng.core.Component({
   }
 
 });
+
+
+export default FirstView;

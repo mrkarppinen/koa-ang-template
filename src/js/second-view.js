@@ -1,8 +1,9 @@
 
+import { Component } from '../../node_modules/@angular/core';
+import { Router } from '../../node_modules/@angular/router';
 
 
-
-var SecondView = ng.core.Component({
+var SecondView = Component({
   templateUrl: 'public/templates/second.html'
 }).Class({
 
@@ -12,16 +13,17 @@ var SecondView = ng.core.Component({
   },
 
   first: function(){
-    this.router.navigate(['FirstView']);
+    this.router.navigate(["/view1"]);
   },
 
 
   third: function(){
-    this.router.navigate(['ThirdView', {id: this.value}]);
+    this.router.navigate(['/view3', this.value ]);
+
   }
 
 });
 
-SecondView.parameters = [[ng.router.Router]];
+SecondView.parameters = [[Router]];
 
 export default SecondView;
