@@ -1,7 +1,7 @@
 
 
-import { Component } from '../../node_modules/@angular/core';
-import { Router, ActivatedRoute, Params } from '../../node_modules/@angular/router';
+import { Component } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 
 

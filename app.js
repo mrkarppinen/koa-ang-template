@@ -11,8 +11,6 @@ var middlewares = require('./lib/middlewares');
 
 // static files
 app.use(mount('/public', middlewares.statics));
-app.use(mount('/node_modules', middlewares.statics));
-
 
 app.use(mount('/', middlewares.index));
 
