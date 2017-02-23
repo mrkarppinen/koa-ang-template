@@ -1,5 +1,5 @@
 
-import { Component } from '../../node_modules/@angular/core';
+import { Component } from '@angular/core';
 
 var FirstView = Component({
   templateUrl: 'public/templates/first.html'

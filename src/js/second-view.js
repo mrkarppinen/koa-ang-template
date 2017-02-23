@@ -1,6 +1,6 @@
 
-import { Component } from '../../node_modules/@angular/core';
-import { Router } from '../../node_modules/@angular/router';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 var SecondView = Component({

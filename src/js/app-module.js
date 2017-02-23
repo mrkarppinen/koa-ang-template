@@ -1,7 +1,7 @@
 
-import { NgModule } from '../../node_modules/@angular/core';
-import { BrowserModule } from '../../node_modules/@angular/platform-browser'
-  import { Router, RouterModule } from '../../node_modules/@angular/router';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser'
+  import { Router, RouterModule } from '@angular/router';
 import { FormsModule }    from '@angular/forms';
 
 import AppController from './app-controller.js';
